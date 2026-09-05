@@ -3,7 +3,7 @@
 name: architect
 description: Design software architecture, evaluate multiple solutions, analyze trade-offs, and recommend maintainable engineering decisions before implementation.
 compatibility: opencode
------------------------
+---
 
 # Architect Skill
 
@@ -21,8 +21,8 @@ Do not use this skill for small code changes or isolated bug fixes.
 
 Use this skill when:
 
-* Starting a new project
-* Designing a new feature
+* Starting a new project with meaningful technical decisions
+* Designing a feature with meaningful architecture, integration, data, or scalability implications
 * Reviewing an existing architecture
 * Choosing between multiple technologies
 * Refactoring a large module
@@ -66,7 +66,7 @@ Explain them briefly.
 
 # Alternative Solutions
 
-Always propose at least two realistic solutions.
+When two or more realistic solutions exist, compare the relevant alternatives.
 
 For each solution explain:
 

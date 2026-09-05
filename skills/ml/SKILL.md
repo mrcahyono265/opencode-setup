@@ -12,15 +12,16 @@ Orchestrate ML work around the actual objective rather than forcing a web-develo
 
 Workflow:
 
-**Understand → Project Context → Plan → User Approval → Implement → Evaluate → Document**
+**Understand → Project Context → Project Planning → Approval/Freeze → Implement → Evaluate → Document**
 
 ## Start
 
 1. Clarify the ML objective and success metric.
 2. Inspect the relevant project structure and existing artifacts.
 3. Use the `project-context` skill to draft or update project `AGENTS.md` with verified context, data boundaries, model assumptions, and constraints.
-4. Identify missing information.
-5. Produce a plan and wait for explicit approval before implementation.
+4. Use `project-planning` to select and draft only the specifications relevant to the project.
+5. Identify missing information.
+6. Present the plan, wait for explicit approval, mark the selected specifications `APPROVED`, then implement.
 
 ## Planning Areas
 
@@ -39,6 +40,10 @@ Evaluate only the areas relevant to the task:
 
 Use `architect` for significant system or ML architecture decisions.
 
+## Security
+
+Use `security-review` when the work handles user data, sensitive inputs or outputs, uploads, model access controls, external integrations, or privileged inference operations.
+
 ## Implementation
 
 - Preserve the existing project structure unless change is justified.
@@ -49,7 +54,7 @@ Use `architect` for significant system or ML architecture decisions.
 
 ## MCP Selection
 
-- `codebase-memory`: high-level structure and dependency/impact exploration.
+- `codebase-memory-mcp`: high-level structure and dependency/impact exploration.
 - `Serena`: precise code navigation/refactoring.
 - `Context7`: current library/framework/SDK documentation.
 
@@ -61,7 +66,7 @@ Prefer focused validation:
 
 - data validation
 - unit/integration tests
-- evaluation metrics
+- evaluation metrics and acceptance criteria
 - reproducibility checks
 - inference checks
 

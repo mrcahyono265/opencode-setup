@@ -2,146 +2,58 @@
 
 > {{project_description}}
 
----
-
 ## Overview
 
 {{overview}}
-
----
 
 ## Features
 
 {{features}}
 
----
-
 ## Technology Stack
 
-| Category             | Technology |
-| -------------------- | ---------- |
-| {{technology_stack}} |            |
+{{technology_stack}}
 
----
+## Getting Started
 
-## Project Structure
+Include only the subsections that apply to this project.
 
-```text
-{{project_structure}}
-```
-
----
-
-## Prerequisites
-
-Before starting, ensure the following tools are installed:
+### Requirements
 
 {{requirements}}
 
----
-
-## Installation
+### Installation
 
 ```bash
 {{installation}}
 ```
 
----
+### Configuration
 
-## Environment Variables
+{{configuration}}
 
-Copy the example environment file.
-
-```bash
-cp .env.example .env
-```
-
-Configure the required environment variables before running the application.
-
----
-
-## Development
-
-Start the development environment.
+### Development
 
 ```bash
 {{development}}
 ```
 
----
+## Verification
 
-## Testing
-
-Run the project tests.
-
-```bash
-{{testing}}
-```
-
----
-
-## Linting & Formatting
-
-```bash
-{{lint}}
-```
-
-```bash
-{{format}}
-```
-
----
-
-## Docker
-
-{{docker_description}}
-
-Build
-
-```bash
-{{docker_build}}
-```
-
-Run
-
-```bash
-{{docker_run}}
-```
-
----
+{{verification}}
 
 ## Deployment
 
-{{deployment_notes}}
+Include this section only when deployment instructions are needed.
 
----
+{{deployment_notes}}
 
 ## Documentation
 
-Project documentation can be found in:
-
-```text
-docs/
-```
-
-Additional documents may include:
-
-* Architecture
-* API Documentation
-* Decision Records
-* User Guides
-
----
-
-## Contributing
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit using Conventional Commits.
-4. Open a Pull Request.
-
----
+{{documentation_links}}
 
 ## License
+
+Include this section only when the project declares a license.
 
 {{license}}

@@ -12,7 +12,7 @@ Coordinate frontend, backend, and ML components without assuming that one layer 
 
 Workflow:
 
-**Understand → Map Boundaries → Project Context → Plan → User Approval → Implement → Verify → Document**
+**Understand → Map Boundaries → Project Context → Project Planning → Approval/Freeze → Implement → Verify → Document**
 
 ## Start
 
@@ -23,8 +23,9 @@ Workflow:
    - ML service or inference layer
    - data/model storage
 3. Use the `project-context` skill to draft or update project `AGENTS.md` with verified architecture, contracts, data boundaries, and constraints.
-4. Ask questions when critical information is missing.
-5. Produce a plan and wait for explicit approval.
+4. Use `project-planning` to select and draft only the specifications relevant to the project.
+5. Ask questions when critical information is missing.
+6. Present the plan, wait for explicit approval, mark the selected specifications `APPROVED`, then implement.
 
 ## Architecture
 
@@ -75,7 +76,7 @@ Pay particular attention to whether one user can access another user's data or i
 
 ## MCP Selection
 
-- `codebase-memory`: map relationships and narrow repository exploration.
+- `codebase-memory-mcp`: map relationships and narrow repository exploration.
 - `Serena`: symbol-level investigation/refactoring.
 - `Context7`: current framework/library/SDK documentation.
 - `Playwright`: browser verification.

@@ -20,16 +20,16 @@ Before generating Docker files, ask the user whether Docker is needed for the in
 
 ## Workflow
 
-**Assess → Ask → Plan → Approve → Generate → Local Build/Test → Commit → Server Build/Deploy**
+**Assess → Ask → Plan → Approve → Generate → Local Build/Test → Server Build/Deploy**
 
 1. Determine the deployment target and whether containers are actually useful.
 2. Ask for confirmation if Docker has not already been requested.
-3. Inspect the real project structure and runtime requirements.
+3. Read the approved deployment specification when it was selected, then inspect the real project structure and runtime requirements.
 4. Read only the template references required by the selected architecture.
 5. Generate the smallest appropriate Docker configuration.
-6. Validate the container locally before committing.
+6. Validate the container locally before a user-requested commit.
 7. Keep secrets out of images and source control.
-8. Document required server environment variables, ports, volumes, and deployment commands.
+8. Update the approved deployment specification and project documentation with required server environment variables, ports, volumes, and deployment commands.
 
 ## Templates
 
@@ -89,14 +89,14 @@ Use service names and internal networking consistently. Persist stateful data wi
 
 ## Local Verification
 
-Before pushing deployment configuration:
+Before a user-requested commit:
 
 1. Build the image(s).
 2. Start the relevant Compose services.
 3. Check container health/status and logs.
 4. Verify the application through the cheapest meaningful path.
 5. Run focused tests when relevant.
-6. Fix configuration/runtime errors before committing.
+6. Fix configuration/runtime errors before the change is committed.
 
 Do not treat `docker build` success alone as deployment verification.
 

@@ -3,7 +3,7 @@
 name: ui-review
 description: Review, evaluate, and improve user interfaces by focusing on usability, consistency, accessibility, responsiveness, and modern design principles before implementation.
 compatibility: opencode
------------------------
+---
 
 # UI Review Skill
 

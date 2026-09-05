@@ -5,10 +5,10 @@ Name:
 Purpose:
 
 ## Source of Truth
-Approved project specifications in `docs/` are authoritative for requirements, scope, behavior, constraints, and acceptance criteria.
+Only the approved project specifications listed below are authoritative for requirements, scope, behavior, constraints, and acceptance criteria.
 
 Relevant documents:
-- `docs/PRD.md`
+-
 
 ## Current Status
 Specification: DRAFT / APPROVED

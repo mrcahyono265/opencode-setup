@@ -1,3 +1,9 @@
+---
+name: project-planning
+description: Establish approved project specifications before implementation, including scope, constraints, and acceptance criteria.
+compatibility: opencode
+---
+
 # Project Planning
 
 ## Purpose

@@ -1,4 +1,7 @@
 node_modules/
+.env
+.env.*
+!.env.example
 .ponytail-active
 package.json
 package-lock.json

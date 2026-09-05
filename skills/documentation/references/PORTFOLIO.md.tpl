@@ -9,11 +9,12 @@ repository: "{{repository}}"
 demo: "{{demo}}"
 started: "{{started_date}}"
 completed: "{{completed_date}}"
-tags:
-{{tags}}
---------
+tags: [{{tags}}]
+---
 
 # {{project_name}}
+
+<!-- Keep only relevant sections and do not invent results, metrics, or claims. -->
 
 > {{short_description}}
 
@@ -55,9 +56,7 @@ Explain how the proposed solution addresses the problem.
 
 # Technology Stack
 
-| Category             | Technology |
-| -------------------- | ---------- |
-| {{technology_stack}} |            |
+{{technology_stack}}
 
 ---
 
@@ -79,9 +78,7 @@ Include:
 
 Document important technical decisions.
 
-| Decision                  | Reason | Trade-off |
-| ------------------------- | ------ | --------- |
-| {{engineering_decisions}} |        |           |
+{{engineering_decisions}}
 
 ---
 

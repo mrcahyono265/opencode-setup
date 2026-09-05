@@ -103,7 +103,7 @@ Project-level `AGENTS.md` files are the primary source of project context and co
 
 Use the minimum necessary tool/context for the task. Do not call every available MCP by default.
 
-## codebase-memory
+## codebase-memory-mcp
 
 Use for:
 
@@ -165,8 +165,10 @@ Load only the skill(s) relevant to the current task.
 ### General skills
 
 - `project-context` — create/update project `AGENTS.md` from verified context using its supporting template.
+- `project-planning` — establish approved project specifications before implementation.
 - `architect` — architecture and significant engineering decisions
 - `documentation` — synchronized project documentation
+- `deployment` — optional containerized deployment workflow
 - `security-review` — targeted application/security review
 - `ui-review` — UI/UX and visual quality review
 - `teacher` — deeper engineering explanation when learning is the goal

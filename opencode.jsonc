@@ -3,7 +3,7 @@
 
   "lsp": true,
 
-  "plugin": ["opencode-gemini-auth@latest", "@dietrichgebert/ponytail"],
+  "plugin": ["@dietrichgebert/ponytail"],
 
   "mcp": {
     "context7": {
@@ -11,7 +11,7 @@
       "url": "https://mcp.context7.com/mcp",
 
       "headers": {
-        "CONTEXT7_API_KEY": "API_HERE",
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}",
       },
 
       "enabled": true,
@@ -42,9 +42,10 @@
     },
     "codebase-memory-mcp": {
       "command": [
-        "codebase-memory-mcp.exe_PATH",
+        "codebase-memory-mcp",
       ],
       "type": "local",
+      "enabled": true,
     },
   },
 }

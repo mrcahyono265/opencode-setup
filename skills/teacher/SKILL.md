@@ -3,7 +3,7 @@
 name: teacher
 description: Explain engineering concepts, implementation decisions, and best practices in a practical, structured, and mentor-like way to help developers learn while building software.
 compatibility: opencode
------------------------
+---
 
 # Teacher Skill
 

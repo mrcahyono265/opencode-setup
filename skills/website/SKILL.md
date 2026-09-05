@@ -12,7 +12,7 @@ Orchestrate web development without loading every web-related capability at once
 
 The workflow is:
 
-**Understand → Project Context → Plan → User Approval → Implement → Verify → Document**
+**Understand → Project Context → Project Planning → Approval/Freeze → Implement → Verify → Document**
 
 ## Start
 
@@ -21,8 +21,9 @@ When invoked for a new or unclear project:
 1. Understand the goal, audience, core user flows, constraints, and success criteria.
 2. Inspect the existing project only as deeply as necessary.
 3. Use the `project-context` skill to draft or update the project-level `AGENTS.md` with verified context and important constraints.
-4. If critical information is missing, ask concise questions.
-5. Produce a plan and wait for explicit approval before implementation.
+4. Use `project-planning` to select and draft only the specifications relevant to the project.
+5. If critical information is missing, ask concise questions.
+6. Present the plan, wait for explicit approval, mark the selected specifications `APPROVED`, then implement.
 
 Do not silently invent business rules, content, integrations, or architecture.
 
@@ -59,7 +60,7 @@ For full-stack projects, frontend-first is a preferred workflow only when it pro
 
 ## MCP Selection
 
-- `codebase-memory`: repository structure and impact exploration when useful.
+- `codebase-memory-mcp`: repository structure and impact exploration when useful.
 - `Serena`: symbol-level navigation/refactoring when useful.
 - `Context7`: current framework/library/API documentation.
 - `Playwright`: browser, responsive, interaction, and visual verification.
