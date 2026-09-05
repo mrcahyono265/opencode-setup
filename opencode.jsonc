@@ -5,21 +5,13 @@
 
   "plugin": ["opencode-gemini-auth@latest", "@dietrichgebert/ponytail"],
 
-  "provider": {
-    "google": {
-      "options": {
-        "projectId": "durable-surfer-462507-f8",
-      },
-    },
-  },
-
   "mcp": {
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
 
       "headers": {
-        "CONTEXT7_API_KEY": "ctx7sk-d4090a00-6dd7-4171-bd5b-114e9320794e",
+        "CONTEXT7_API_KEY": "API_HERE",
       },
 
       "enabled": true,
@@ -50,7 +42,7 @@
     },
     "codebase-memory-mcp": {
       "command": [
-        "C:/Users/mrcah/AppData/Local/Programs/codebase-memory-mcp/codebase-memory-mcp.exe",
+        "codebase-memory-mcp.exe_PATH",
       ],
       "type": "local",
     },
