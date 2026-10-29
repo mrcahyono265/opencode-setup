@@ -5,20 +5,9 @@ Name:
 Purpose:
 
 ## Source of Truth
-Only the approved project specifications listed below are authoritative for requirements, scope, behavior, constraints, and acceptance criteria.
+Project plan: `docs/plan.md`
 
-Relevant documents:
--
-
-## Current Status
-Specification: DRAFT / APPROVED
-Implementation: NOT STARTED / IN PROGRESS / VERIFIED
-
-## Scope
-### In Scope
--
-### Out of Scope
--
+The approved plan is authoritative for goals, scope, decisions, constraints, and acceptance criteria. Supporting documents are listed from the plan and do not duplicate it.
 
 ## Critical Rules
 - Do not invent requirements or business rules.

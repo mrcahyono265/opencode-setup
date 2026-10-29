@@ -15,15 +15,16 @@ Project docs are not passive documentation. They define intended scope, behavior
 1. Do not implement before requirements are sufficiently clear.
 2. Ask concise questions when missing information materially affects scope, behavior, architecture, security, UX, data, or deployment.
 3. Never invent requirements, business rules, project facts, or constraints.
-4. Select only documents relevant to the project. Do not create unnecessary docs.
+4. Start with one `docs/plan.md`. Split details into another document only when they are substantial and independently maintained.
 5. Clearly separate confirmed requirements, assumptions, open questions, and out-of-scope items.
-6. Always create a project-specific `AGENTS.md` for a new project.
+6. Always create a concise project-specific `AGENTS.md` for a new project. It links to `docs/plan.md`; it does not repeat planning detail.
 7. Get user approval before implementation unless the user explicitly asks to skip planning.
 8. After approval, treat approved project docs as the **Project Source of Truth**.
 9. Implementation must conform to the approved Source of Truth.
 10. Never silently expand scope or change approved behavior.
 11. If a new request materially changes scope, explain the impact, update affected specs after approval, then implement.
-12. Before completion, validate implementation against the Source of Truth and acceptance criteria.
+12. Keep each fact in one source. A supporting document links from `docs/plan.md` and does not repeat its goals, scope, or decisions.
+13. Before completion, validate implementation against the Source of Truth and acceptance criteria.
 
 ## Source of Truth Hierarchy
 1. Explicit current user instruction
@@ -37,37 +38,23 @@ Never treat an assumption as a confirmed fact.
 
 ## Workflow
 
-### 1. Discover
-Understand goal, problem, users, workflows, requirements, constraints, data, integrations, security/privacy, and deployment expectations. Ask only questions that materially reduce ambiguity.
+### 1. Clarify And Brainstorm
+Understand the goal, users, constraints, risks, and success criteria. Ask only questions that materially reduce ambiguity. Do not create planning files until the direction is sufficiently clear.
 
-### 2. Select Documents
-Choose documents by project type.
+### 2. Draft The Plan
+Use `references/plan.md` to create `docs/plan.md`. Every goal needs an outcome, approach, scope, and acceptance criteria. Prefer bullets to prose.
 
-Examples:
-- Web/SaaS: PRD, ARCHITECTURE, DATABASE, API, UIUX, SECURITY, DEPLOYMENT
-- ML: PRD, ML-SPEC, DATA-SPEC, ARCHITECTURE, SECURITY, DEPLOYMENT
-- AI app: PRD, AI-SPEC, DATA-SPEC, ARCHITECTURE, SECURITY, DEPLOYMENT
-- Landing/marketing: PRD, UIUX, COPYWRITING, DEPLOYMENT
+### 3. Split Only When Needed
+Create an API, database, security, ML, or deployment document only when that topic needs substantial independent detail. Link it from the plan and keep the plan as the concise index; do not duplicate facts.
 
-Do not force every project to contain every document.
+### 4. Draft Project Context
+Use `project-context` to create a concise project `AGENTS.md` that records stable context and points to `docs/plan.md`.
 
-### 3. Draft
-Create selected specs from this skill's references. PRD defines scope and acceptance criteria. Technical specs must derive from approved requirements.
+### 5. Review And Freeze
+Present the plan and project context for user review. After approval, mark `docs/plan.md` as `APPROVED`; it becomes the project Source of Truth.
 
-### 4. Review Gate
-Present scope, non-scope, decisions, assumptions, open questions, selected docs, and major trade-offs. Wait for approval.
-
-### 5. Freeze
-Mark approved specs as `APPROVED`. Treat them as authoritative. Do not rewrite requirements to match code.
-
-### 6. Implement
-Before significant decisions, check the relevant source-of-truth document and inspect code/context as needed. Use relevant skills/MCPs only when they add value.
-
-### 7. Requirement Changes
-Identify affected requirements -> explain impact -> obtain approval when material -> update affected specs -> re-check dependent architecture/security/UI/data decisions -> implement.
-
-### 8. Verify
-Check acceptance criteria, business rules, scope boundaries, security requirements, and specification consistency. Report mismatches explicitly.
+### 6. Implement And Verify
+Before significant decisions, check the relevant approved document. For material changes, explain impact, obtain approval, update the plan, and re-check affected decisions. Verify acceptance criteria, scope boundaries, business rules, and applicable security requirements.
 
 ## Efficient Context Usage
 - Do not read every reference by default.

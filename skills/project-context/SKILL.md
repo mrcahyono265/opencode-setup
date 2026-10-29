@@ -12,7 +12,7 @@ Create or update the project's `AGENTS.md` as AI working context. It is not a re
 
 ## When To Use
 
-Use during project initialization or when meaningful project context changes, especially when invoked by a workflow skill such as `website`, `ml`, or `web-ml`.
+Use after clarification has made the project direction sufficiently clear, during project initialization, or when meaningful stable context changes.
 
 Do not rewrite the project `AGENTS.md` for ordinary implementation tasks when its context remains accurate.
 
@@ -39,14 +39,14 @@ The source template name and output filename are intentionally different.
 - If documentation conflicts with code and the conflict affects the current task, verify and ask when necessary.
 - Preserve useful existing project context when updating the file.
 - Do not include secrets, credentials, tokens, or unnecessary personal/client data.
-- Do not create the file silently after the planning gate if the workflow requires user review; present the draft as part of the plan.
+- Draft it with `docs/plan.md` during planning. Present both files for user review before implementation.
 
 ## Suggested Process
 
-1. Inspect the project at the depth needed for the current task.
+1. Clarify the project with `project-planning` first.
 2. Read `references/PROJECT-AGENTS.md.tpl`.
-3. Fill the template with verified project facts.
+3. Fill the template with verified stable facts and a link to `docs/plan.md`.
 4. Mark important unknowns rather than guessing.
-5. Present the proposed project context during planning.
+5. Present the draft project context with the draft plan.
 6. After approval, create or update `<project-root>/AGENTS.md`.
-7. Keep it synchronized only when meaningful project context changes.
+7. Keep it synchronized only when meaningful stable context changes.

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  "lsp": true,
+
+  "plugins": ["@dietrichgebert/ponytail"],
+
+  "mcp": {
+    "servers": {
+      "context7": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp",
+        "oauth": false,
+        "headers": {
+          "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}",
+        },
+      },
+
+      "serena": {
+        "type": "local",
+        "command": [
+          "uvx",
+          "--from",
+          "git+https://github.com/oraios/serena",
+          "serena",
+          "start-mcp-server",
+          "--context",
+          "ide",
+        ],
+      },
+
+      "playwright": {
+        "type": "local",
+        "command": ["npx", "@playwright/mcp@latest", "--headless"],
+      },
+
+      "codebase-memory-mcp": {
+        "type": "local",
+        "command": ["codebase-memory-mcp"],
+      },
+
+      "gptimage": {
+        "type": "local",
+        "command": ["node", "{env:GPTIMAGE_DIR}/src/server.js"],
+        "environment": {
+          "GPTIMAGE_MODEL": "gpt-5.6-terra",
+        },
+      },
+
+      "canva": {
+        "type": "remote",
+        "url": "https://mcp.canva.com/mcp",
+      },
+
+      "mysql": {
+        "type": "local",
+        "command": ["npx", "-y", "@benborla29/mcp-server-mysql"],
+        "environment": {
+          "MYSQL_HOST": "127.0.0.1",
+          "MYSQL_PORT": "{env:MYSQL_MCP_PORT}",
+          "MYSQL_USER": "{env:MYSQL_MCP_USER}",
+          "MYSQL_PASS": "{env:MYSQL_MCP_PASSWORD}",
+          "ALLOW_INSERT_OPERATION": "true",
+          "ALLOW_UPDATE_OPERATION": "true",
+          "ALLOW_DELETE_OPERATION": "true",
+          "ALLOW_DDL_OPERATION": "true",
+        },
+      },
+
+      "postgres": {
+        "type": "local",
+        "command": ["uvx", "postgres-mcp", "--access-mode=unrestricted"],
+        "environment": {
+          "DATABASE_URI": "{env:POSTGRES_MCP_URI}",
+        },
+      },
+    },
+  },
+}

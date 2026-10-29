@@ -9,4 +9,4 @@ Use this kit's root `AGENTS.md` as the global Source of Truth policy. It already
 
 The main skill stays compact; detailed templates live under `references/`.
 
-For each project, create only the relevant docs under `docs/`, plus a project-specific `AGENTS.md`.
+For each project, begin with `docs/plan.md` and a project-specific `AGENTS.md`. Create another document under `docs/` only when it needs substantial independent detail; link it from the plan without duplicating facts.
